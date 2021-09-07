@@ -12,7 +12,7 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 gi
 
 # Project Specific
-.json
+config.json
 .DS_Store
 
 # Runtime data
