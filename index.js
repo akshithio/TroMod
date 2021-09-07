@@ -12,9 +12,9 @@ const eventFiles = fs
 for (const file of eventFiles) {
   const event = require(`./events/${file}`);
   if (event.once) {
-    client.once(event.name, (...args) => event.execute(...args));
+    client.once(event.name, (...args) => event.execute(...args, client));
   } else {
-    client.on(event.name, (...args) => event.execute(...args));
+    client.on(event.name, (...args) => event.execute(...args, client));
   }
 }
 
@@ -22,6 +22,8 @@ client.commands = new Discord.Collection();
 client.cooldowns = new Discord.Collection();
 
 const commandFolders = fs.readdirSync("./commands");
+
+// console.log(commandFolders)
 
 for (const folder of commandFolders) {
   const commandFiles = fs
@@ -40,9 +42,6 @@ for (const folder of commandFolders) {
 //   "jesus can someone duct tape his mouth and butt hole",
 // ];
 
-client.once("ready", () => {
-  console.log("Ready!");
-});
 
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
