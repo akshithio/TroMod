@@ -2,6 +2,8 @@ const { prefix, token } = require("../config.json");
 
 // this is a test to see if git is working well please ignore
 
+// test #2
+
 module.exports = {
   name: "message",
   execute(message) {
