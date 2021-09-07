@@ -1,7 +1,7 @@
 module.exports = {
   name: "ready",
   once: true,
-  execute() {
+  execute(client) {
     console.log("Bot up and running boi");
   },
 };
