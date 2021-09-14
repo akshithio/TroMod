@@ -1,6 +1,6 @@
 const https = require("https");
 const Discord = require("discord.js");
-const url = "https://www.reddit.com/r/meme/top/.json?limit=100";
+const url = "https://www.reddit.com/r/memes/top/.json?limit=100";
 
 module.exports = {
   name: "meme",
