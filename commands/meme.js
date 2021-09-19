@@ -7,7 +7,7 @@ module.exports = {
   async execute(interaction) {
     interaction.deferReply();
 
-    subReddit = ["memes", "meme", "dankmemes"];
+    subReddit = ["filler", "memes", "meme", "dankmemes"];
 
     const url =
       "https://www.reddit.com/r/" +
