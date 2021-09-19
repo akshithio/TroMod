@@ -10,9 +10,7 @@ module.exports = {
       "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
     https.get(url, function (response) {
       response.on("data", function (data) {
-        console.log(data);
         var joke = JSON.parse(data);
-        console.log(joke);
         interaction.reply(joke.joke);
       });
     });

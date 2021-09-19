@@ -16,14 +16,17 @@ for (const file of commandFiles) {
   client.commands.set(command.data.name, command);
 }
 
-
 client.once("ready", () => {
+  // client.user.setActivity("Chess - ask3105", {
+  //   type: "STREAMING",
+  //   url: "https://www.twitch.tv/aks3105",
+  // });
+
   console.log("Ready!");
 });
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
-
 
   const command = client.commands.get(interaction.commandName);
 
