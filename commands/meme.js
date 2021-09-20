@@ -9,9 +9,13 @@ module.exports = {
 
     subReddit = ["memes", "meme", "dankmemes"];
 
+    randNumberLOL = Math.round(Math.random() * 2);
+
+    console.log(randNumberLOL + ": Array Number");
+
     const url =
       "https://www.reddit.com/r/" +
-      subReddit[Math.round(Math.random() * 2 + 1)] +
+      subReddit[randNumberLOL] +
       "/top/.json?limit=100";
 
     https.get(url, (result) => {
@@ -24,8 +28,9 @@ module.exports = {
         .on("end", () => {
           var response = JSON.parse(body);
 
-          var index =
-            response.data.children[Math.floor(Math.random() * 99) + 1].data;
+          randNumber = Math.floor(Math.random() * 99) + 1;
+
+          var index = response.data.children[randNumber].data;
 
           while (
             index.post_hint === "rich:video" ||

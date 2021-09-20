@@ -2,7 +2,9 @@ const { token } = require("./config.json");
 const fs = require("fs");
 const { Client, Collection, Intents } = require("discord.js");
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const client = new Client({
+  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_VOICE_STATES],
+});
 client.commands = new Collection();
 
 const commandFiles = fs
