@@ -11,12 +11,12 @@ module.exports = {
 
     randNumberLOL = Math.round(Math.random() * 2);
 
-    console.log(randNumberLOL + ": Array Number");
-
     const url =
       "https://www.reddit.com/r/" +
       subReddit[randNumberLOL] +
       "/top/.json?limit=100";
+
+    console.log(url);
 
     https.get(url, (result) => {
       var body = "";
@@ -29,6 +29,8 @@ module.exports = {
           var response = JSON.parse(body);
 
           randNumber = Math.floor(Math.random() * 99) + 1;
+
+          console.log("post number " + randNumber);
 
           var index = response.data.children[randNumber].data;
 
