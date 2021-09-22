@@ -2,6 +2,9 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 
 var connection;
 
+// const fs = require("fs");
+// const ytdl = require("ytdl-core");
+
 const {
   joinVoiceChannel,
   createAudioPlayer,
@@ -15,6 +18,7 @@ const {
 module.exports = {
   data: new SlashCommandBuilder().setName("join").setDescription("joins vc"),
   async execute(interaction) {
+    console.log(interaction.channel);
     let channel = interaction.member.voice.channel;
 
     try {
@@ -42,7 +46,9 @@ module.exports = {
         return entersState(player, AudioPlayerStatus.Playing, 5e3);
       }
 
-      interaction.reply("joined vc");
+      interaction.reply(
+        "https://tenor.com/view/rickroll-roll-rick-never-gonna-give-you-up-never-gonna-gif-22954713"
+      );
     } catch (err) {
       interaction.reply(
         "Error executing that command, make sure to be in a voice channel before calling this command"

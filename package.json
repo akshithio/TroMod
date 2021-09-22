@@ -1,16 +1,34 @@
 {
+  "name": "tromod",
+  "version": "1.0.0",
+  "description": "First Attempt at a Discord.js bot. Simple. Redoing this branch from scratch, with interactions and slash commands along with new v13 discord.js stuff, possibility of merging with main branch soon.",
+  "main": "index.js",
   "dependencies": {
     "@discordjs/builders": "^0.6.0",
-    "@discordjs/opus": "^0.5.3",
-    "@discordjs/rest": "^0.1.0-canary.0",
-    "discord-api-types": "^0.23.1",
+    "@discordjs/voice": "^0.6.0",
     "discord.js": "^13.1.0",
-    "dotenv": "^10.0.0",
-    "ffmpeg-static": "^4.4.0",
-    "fs": "^0.0.1-security",
-    "libsodium-wrappers": "^0.7.9"
+    "libsodium-wrappers": "^0.7.9",
+    "m3u8stream": "^0.8.4",
+    "miniget": "^4.2.1",
+    "prism-media": "^1.3.2",
+    "sax": "^1.2.4",
+    "tiny-typed-emitter": "^2.1.0",
+    "tweetnacl": "^1.0.3",
+    "ws": "^7.5.5",
+    "ytdl-core": "^4.9.1"
   },
-  "devDependencies": {
-    "@types/node": "^16.9.1"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobby3105/TroMod.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bobby3105/TroMod/issues"
+  },
+  "homepage": "https://github.com/Bobby3105/TroMod#readme"
 }
