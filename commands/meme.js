@@ -34,6 +34,8 @@ module.exports = {
 
           var index = response.data.children[randNumber].data;
 
+          console.log(index);
+
           while (
             index.post_hint === "rich:video" ||
             index.post_hint === "link"

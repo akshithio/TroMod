@@ -21,6 +21,16 @@ module.exports = {
     console.log(interaction.channel);
     let channel = interaction.member.voice.channel;
 
+    var arrayofMusic = [
+      "MiceOnVenus.mp3",
+      "Pigstep.mp3",
+      "Rickroll.mp3",
+      "SubwooferLullaby.mp3",
+      "Sweden.mp3",
+    ];
+
+    var link = "Tromod/Music/" + arrayofMusic[0];
+    // Math.round(Math.random() * 4)
     try {
       connection = joinVoiceChannel({
         channelId: channel.id,
@@ -35,7 +45,8 @@ module.exports = {
 
       function playSong() {
         const resource = createAudioResource(
-          "/Users/akshithchowdary/Developer/Coding/Projects/DiscordBots/Tromod/lol.mp3",
+          "/Users/akshithchowdary/Developer/Coding/Projects/DiscordBots/" +
+            link,
           {
             inputType: StreamType.Arbitrary,
           }
@@ -47,7 +58,7 @@ module.exports = {
       }
 
       interaction.reply(
-        "https://tenor.com/view/rickroll-roll-rick-never-gonna-give-you-up-never-gonna-gif-22954713"
+        "**Hacking Lord's Computer System** \n Accessing " + link
       );
     } catch (err) {
       interaction.reply(
